@@ -12,7 +12,7 @@ const Favorites = () => {
     return (
         <div className='flex flex-wrap  justify-center align-center '>
             {favorite.length ? favorite.map(item =>
-                <CharacterCart characterUrl={`https://rickandmortyapi.com/api/character/${item}`} search={""} />
+                <CharacterCart characterUrl={`https://rickandmortyapi.com/api/character/${item}`} search={""} key={item} />
             ) : <div className=' flex flex-column justify-center'>
                 <h3 className='text-black'>No Favorites</h3>
                 <Link href="/" className='text-main2 flex  justify-center m-2 p-2'>Go Home</Link>
