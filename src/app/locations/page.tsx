@@ -18,11 +18,11 @@ const Locations = async () => {
 
 
             <div className='flex justify-center flex-wrap box w-full'>
-                {data.length > 0 && data.map((item) => (<LocationCard item={item} key={item.id} />))}
+                {data.length > 0 && data.map((item: any) => (<LocationCard item={item} key={item.id} />))}
 
             </div>
             <div>
-                <Paginations info={info} current={page} />
+                <Paginations info={info || null} current={page} />
             </div>
         </main>
     )

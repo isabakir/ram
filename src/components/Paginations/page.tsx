@@ -1,14 +1,14 @@
 import { useRouter } from 'next/navigation'
 import React from 'react'
 type info = {
-    prev: string | null;
-    next: string | null;
+    prev: string;
+    next: string;
     pages: number;
 
 }
 
 
-const Paginations = ({ info, current }: { info: info, current: string }) => {
+const Paginations = ({ info, current }: { info: any, current: string }) => {
     const router = useRouter();
     const showPage = 5
     const starter = Math.max(1, parseInt(current) - Math.floor(showPage / 2));

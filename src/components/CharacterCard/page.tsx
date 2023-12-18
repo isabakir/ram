@@ -34,7 +34,7 @@ type StatusMap = {
 
 const CharacterCart = ({ characterUrl, search }: { characterUrl: string, search: string | null }) => {
     const [character, setCharacter] = useState<character | undefined>();
-    const favorite = useSelector(state => state.favorite.fav);
+    const favorite = useSelector((state: any) => state.favorite.fav);
     const dispatch = useAppDispatch();
 
 

@@ -23,9 +23,10 @@ type character = {
 
 
 }
+
 const Characters = () => {
     const [data, setData] = useState([]);
-    const [info, setInfo] = useState([]);
+    const [info, setInfo] = useState();
     const params = useSearchParams();
     const page = params.get("page") || "1";
     const searching = params?.get("q") || "";
@@ -74,7 +75,7 @@ const Characters = () => {
 
             </div>
             <div>
-                <Paginations info={info} current={page} />
+                <Paginations info={info || null} current={page} />
             </div>
         </main>
     )
