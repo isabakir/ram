@@ -75,7 +75,7 @@ const Characters = () => {
 
             </div>
             <div>
-                <Paginations info={info || null} current={page} />
+                <Paginations info={info} current={page} />
             </div>
         </main>
     )

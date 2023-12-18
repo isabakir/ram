@@ -12,7 +12,7 @@ const Paginations = ({ info, current }: { info: any, current: string }) => {
     const router = useRouter();
     const showPage = 5
     const starter = Math.max(1, parseInt(current) - Math.floor(showPage / 2));
-    const ender = Math.min(starter + showPage - 1, info.pages);
+    const ender = Math.min(starter + showPage - 1, info?.pages);
 
     const pagesList = Array.from({ length: ender - starter + 1 }, (_, index) => starter + index);
 
